@@ -37,8 +37,6 @@ public class MoviesController : Controller
     public async Task<IActionResult> AddMovie(Movie model)
     {
         var apiClient = new HttpClient();
-        //var stringContent = new StringContent(myMovie.ToString());
-        //var response = await apiClient.PostAsync("https://localhost:5000/api/movies/", stringContent);
 
         var stringContent = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
         var response = await apiClient.PostAsync("https://localhost:5000/api/movies/", stringContent);
