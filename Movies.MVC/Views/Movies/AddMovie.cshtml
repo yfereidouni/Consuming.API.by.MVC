@@ -1,0 +1,10 @@
+﻿@model Movie
+
+<form method="post" asp-controller="Movies" asp-action="AddMovie">
+
+    <input type="text" asp-for="Id" />
+    <input type="text" asp-for="Title" />
+    <input type="text" asp-for="Genre" />
+
+    <input type="submit" value="Save" />
+</form>
